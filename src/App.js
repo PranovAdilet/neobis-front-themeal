@@ -1,6 +1,7 @@
 import Layout from "./compontents/Layout/Layout";
 import {Route, Routes} from "react-router-dom";
 import Meal from "./pages/Meal";
+import Description from "./pages/Description/Description";
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
         <Routes>
             <Route path="/" element={<Layout/>}>
                 <Route path="/" element={<Meal/>}/>
-                <Route path="/meal" element={<Meal/>}/>
+                <Route path={`/meal/:id`} element={<Description/>}/>
             </Route>
         </Routes>
     </div>

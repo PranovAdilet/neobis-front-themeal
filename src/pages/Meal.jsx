@@ -1,23 +1,51 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import SearchMeal from "./SearchMeal/SearchMeal";
+import {getRandomMeal} from "../redux/reducers/meal";
+import {useDispatch, useSelector} from 'react-redux'
+import {oneMeal} from "../redux/reduxSelectors/reduxSelectors";
+import {Link} from "react-router-dom";
 
 const Meal = () => {
+    const [meal, setMeal] = useState()
+    const dispatch = useDispatch()
+
+    const {data, status} = useSelector(oneMeal)
+
+    useEffect(() => {
+        dispatch(getRandomMeal())
+    }, []);
+    console.log(data, status)
+
+
+
+
     return (
         <>
-            <div className="meal">
-                <div className="meal__left">
-                    <h2 className="meal__title-top">Meal of the Day</h2>
-                    <h3 className="meal__title">Roast fennel and aubergine paella</h3>
-                    <p className="meal__info">Vegan | Spanish</p>
+
+                <div className="meal">
+                    <div className="container">
+                        {
+                            status === 'resolve' && <div className="meal__content">
+                                <div className="meal__left">
+                                    <h2 className="meal__title-top">
+                                        Meal of the Day
+                                    </h2>
+                                    <Link to={`/meal/${data.meals[0].idMeal}`} className="meal__title">
+                                        {data.meals[0].strMeal}
+                                    </Link>
+                                    <p className="meal__info">{data.meals[0].strCategory} | {data.meals[0].strArea}</p>
+                                </div>
+                                <div className="meal__right">
+                                    <img className="meal__img" src={data.meals[0].strMealThumb} alt=""/>
+                                </div>
+                            </div>
+                        }
+                    </div>
                 </div>
-                <div className="meal__right">
-                    <img className="meal__img" src="https://www.themealdb.com/images/media/meals/1520081754.jpg"
-                         alt=""/>
-                </div>
-            </div>
-            <SearchMeal/>
-        </>
-    );
-};
+
+                    <SearchMeal/>
+                </>
+            );
+            };
 
 export default Meal;
