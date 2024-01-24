@@ -23,8 +23,8 @@
     font-weight: 700;
     text-align: center;
 
-    width: 500px;
-
+    width: 520px;
+    text-decoration: none;
     &-top{
       font-size: 30px;
       color: #000000;
@@ -39,5 +39,47 @@
 
     border-radius: 10px;
     object-fit: cover;
+  }
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    padding-bottom: 40px;
+  }
+  &__item{
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 7px;
+
+    width: calc(33.33% - 30px);
+    min-height: 400px;
+
+    cursor: pointer;
+    transition: .3s;
+
+    border-radius: 8px;
+
+    padding-bottom: 20px;
+
+    &:hover{
+      transition: .3s;
+      transform: translateY(-10px);
+      box-shadow: 10px 12px 29px -14px rgba(0,0,0,.75);
+    }
+
+    &-img{
+      width: 100%;
+      border-radius: 8px 8px 0 0;
+
+    }
+    &-title{
+      font-size: 19px;
+    }
+  }
+  &__empty{
+    font-size: 35px;
+    padding: 50px 0;
   }
 }

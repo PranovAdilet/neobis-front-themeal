@@ -21,7 +21,8 @@
   color: #d49726;
   font-weight: 700;
   text-align: center;
-  width: 500px;
+  width: 520px;
+  text-decoration: none;
 }
 .meal__title-top {
   font-size: 30px;
@@ -35,6 +36,39 @@
   max-height: 570px;
   border-radius: 10px;
   object-fit: cover;
+}
+.meal__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-bottom: 40px;
+}
+.meal__item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 7px;
+  width: calc(33.33% - 30px);
+  min-height: 400px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 8px;
+  padding-bottom: 20px;
+}
+.meal__item:hover {
+  transition: 0.3s;
+  transform: translateY(-10px);
+  box-shadow: 10px 12px 29px -14px rgba(0, 0, 0, 0.75);
+}
+.meal__item-img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+.meal__item-title {
+  font-size: 19px;
+}
+.meal__empty {
+  font-size: 35px;
+  padding: 50px 0;
 }
 
 .search {
@@ -69,6 +103,7 @@
   padding: 8px 17px;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 .description {
@@ -84,9 +119,13 @@
 .description__list {
   display: flex;
   flex-direction: column;
-  row-gap: 3px;
+  row-gap: 4px;
 }
 .description__list > li {
+  font-size: 19px;
+}
+.description__list > li > span {
+  font-weight: 600;
   font-size: 19px;
 }
 .description__left {
@@ -101,13 +140,12 @@
   font-weight: 700;
   letter-spacing: 1.5px;
   line-height: 58px;
-  margin-bottom: 2rem;
   text-align: center;
 }
 .description__subtitle {
   text-align: center;
   font-size: 18px;
-  margin: 15px 0 25px;
+  margin: 20px 0 35px;
 }
 .description__img {
   border-radius: 8px;
@@ -123,6 +161,9 @@
   text-align: center;
   margin-bottom: 20px;
 }
+.description__instruction-text {
+  font-size: 17px;
+}
 .description__btn {
   align-items: center;
   background-color: red;
@@ -135,6 +176,7 @@
   width: 200px;
   border: none;
   outline: none;
+  text-decoration: none;
 }
 
 * {
@@ -143,6 +185,10 @@
   box-sizing: border-box;
   font-size: 16px;
   list-style-type: none;
+  scroll-behavior: smooth;
+}
+
+html {
   font-family: Raleway, sans-serif;
 }
 

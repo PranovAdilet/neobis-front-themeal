@@ -1,9 +1,13 @@
 import {configureStore} from "@reduxjs/toolkit";
-import meal from "../reducers/meal"
+import randomMeal from "../reducers/randomMeal"
+import oneMeal from "../reducers/oneMeal"
+import searchedMeal from "../reducers/searchMeal"
 
 
 export const store = configureStore({
     reducer: {
-        meal
+        randomMeal,
+        oneMeal,
+        searchedMeal
     }
 })

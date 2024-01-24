@@ -1,6 +1,6 @@
 import Layout from "./compontents/Layout/Layout";
 import {Route, Routes} from "react-router-dom";
-import Meal from "./pages/Meal";
+import Meal from "./pages/Meal/Meal";
 import Description from "./pages/Description/Description";
 
 function App() {

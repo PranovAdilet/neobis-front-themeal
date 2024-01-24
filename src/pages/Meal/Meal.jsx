@@ -1,27 +1,24 @@
 import React, {useEffect, useState} from 'react';
-import SearchMeal from "./SearchMeal/SearchMeal";
-import {getRandomMeal} from "../redux/reducers/meal";
+import SearchMeal from "../SearchMeal/SearchMeal";
+import {getRandomMeal} from "../../redux/reducers/randomMeal";
 import {useDispatch, useSelector} from 'react-redux'
-import {oneMeal} from "../redux/reduxSelectors/reduxSelectors";
+import {selectRandomMeal} from "../../redux/reduxSelectors/reduxSelectors";
 import {Link} from "react-router-dom";
+import SearchedMealsList from "../../compontents/SearchedMealsList";
 
 const Meal = () => {
-    const [meal, setMeal] = useState()
+
     const dispatch = useDispatch()
 
-    const {data, status} = useSelector(oneMeal)
+    const {data, status} = useSelector(selectRandomMeal)
 
     useEffect(() => {
         dispatch(getRandomMeal())
     }, []);
-    console.log(data, status)
-
-
 
 
     return (
         <>
-
                 <div className="meal">
                     <div className="container">
                         {
@@ -42,10 +39,10 @@ const Meal = () => {
                         }
                     </div>
                 </div>
-
                     <SearchMeal/>
+                    <SearchedMealsList/>
                 </>
-            );
-            };
+    );
+};
 
 export default Meal;

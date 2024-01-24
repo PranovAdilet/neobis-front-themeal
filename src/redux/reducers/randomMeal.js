@@ -24,8 +24,8 @@ async () => {
     }
 })
 
-const mealSlice = createSlice({
-    name: "meal",
+const randomMealSlice = createSlice({
+    name: "mealSlice",
     initialState:{
         data: [],
         status: '',
@@ -54,6 +54,4 @@ const mealSlice = createSlice({
     }
 })
 
-export const {} = mealSlice.actions
-
-export default mealSlice.reducer
+export default randomMealSlice.reducer

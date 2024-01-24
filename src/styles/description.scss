@@ -11,9 +11,14 @@
   &__list{
     display: flex;
     flex-direction: column;
-    row-gap: 3px;
+    row-gap: 4px;
     & > li{
       font-size: 19px;
+      & > span{
+        font-weight: 600;
+        font-size: 19px;
+
+      }
     }
   }
   &__left{
@@ -28,14 +33,13 @@
     font-weight: 700;
     letter-spacing: 1.5px;
     line-height: 58px;
-    margin-bottom: 2rem;
 
     text-align: center;
   }
   &__subtitle{
     text-align: center;
     font-size: 18px;
-    margin: 15px 0 25px;
+    margin: 20px 0 35px;
   }
   &__img{
     border-radius: 8px;
@@ -53,7 +57,7 @@
       margin-bottom: 20px;
     }
     &-text{
-
+      font-size: 17px;
     }
   }
   &__btn{
@@ -69,5 +73,7 @@
 
     border: none;
     outline: none;
+
+    text-decoration: none;
   }
 }
