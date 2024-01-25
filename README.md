@@ -34,14 +34,14 @@
 
 ## Project Structure
 
-src/components: Houses React components, including dish search, dish list display, etc.
-src/redux: Contains Redux logic, including actions, reducers, and selectors.
-src/utils: Includes helper utilities, such as functions for data processing.
+- src/components: Houses React components, including dish search, dish list display, etc.
+- src/redux: Contains Redux logic, including actions, reducers, and selectors.
+- src/utils: Includes helper utilities, such as functions for data processing.
 
 ## Additional Information
 
-API: Dish data is sourced from TheMealDB API, providing information about recipes.
-YouTube API: To access the YouTube page, YouTube API is utilized for searching video instructions.
+- API: Dish data is sourced from TheMealDB API, providing information about recipes.
+- YouTube API: To access the YouTube page, YouTube API is utilized for searching video instructions.
 
 ## Author
 
