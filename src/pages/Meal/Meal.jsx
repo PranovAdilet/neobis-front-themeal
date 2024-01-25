@@ -1,10 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import SearchMeal from "../SearchMeal/SearchMeal";
 import {getRandomMeal} from "../../redux/reducers/randomMeal";
 import {useDispatch, useSelector} from 'react-redux'
 import {selectRandomMeal} from "../../redux/reduxSelectors/reduxSelectors";
 import {Link} from "react-router-dom";
-import SearchedMealsList from "../../compontents/SearchedMealsList";
 
 const Meal = () => {
 
@@ -14,7 +13,7 @@ const Meal = () => {
 
     useEffect(() => {
         dispatch(getRandomMeal())
-    }, []);
+    }, [dispatch]);
 
 
     return (

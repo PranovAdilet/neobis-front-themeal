@@ -1,5 +1,3 @@
-import React from "react";
-
 export const getIngredients = (meal) => {
     let strIngredient  = 'strIngredient'
     let strMeasure = 'strMeasure'
