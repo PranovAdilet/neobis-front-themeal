@@ -27,10 +27,10 @@
 
 ## Technologies
 
-React: Utilized for building the user interface and interacting with the API.
-Redux: Manages global state within the application.
-React Router: Facilitates navigation between pages.
-Axios: Executes HTTP requests to interact with the API.
+- React: Utilized for building the user interface and interacting with the API.
+- Redux: Manages global state within the application.
+- React Router: Facilitates navigation between pages.
+- Axios: Executes HTTP requests to interact with the API.
 
 ## Project Structure
 
