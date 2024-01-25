@@ -47,5 +47,6 @@ YouTube API: To access the YouTube page, YouTube API is utilized for searching v
 
 Pranov Adilet
 
-License
+## License
+
 This project is licensed under the MIT License.
