@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Themeal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**themeal** is a web application that empowers users to explore a variety of dishes, access detailed information about each dish, and watch video recipes on YouTube.
 
-## Available Scripts
+## Key Features
 
-In the project directory, you can run:
+- **Dish Search:** Users can enter a query in the search field to receive a list of dishes that match their search criteria.
+- **Detailed Information:** Clicking on a dish in the list provides comprehensive details, including the dish's name, category, area, and an image.
+- **Watch on YouTube:** If a video recipe is available on YouTube, users can navigate to the YouTube page by clicking the "Watch on YouTube" button.
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Install Dependencies:**
+   Ensure that you have Node.js installed. Run the following commands in the project's root directory:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+   npm install
+```
+2. **Run the Application:**
+   After installing dependencies, start the application with the following command:
 
-### `npm test`
+```bash
+  npm start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### The application will be accessible at http://localhost:3000/.
 
-### `npm run build`
+## Technologies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React: Utilized for building the user interface and interacting with the API.
+- Redux: Manages global state within the application.
+- React Router: Facilitates navigation between pages.
+- Axios: Executes HTTP requests to interact with the API.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- src/components: Houses React components, including dish search, dish list display, etc.
+- src/redux: Contains Redux logic, including actions, reducers, and selectors.
+- src/utils: Includes helper utilities, such as functions for data processing.
 
-### `npm run eject`
+## Additional Information
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- API: Dish data is sourced from [TheMealDB API](https://www.themealdb.com/api.php), providing information about recipes.
+- YouTube API: To access the YouTube page, [YouTube API]() is utilized for searching video instructions.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Author
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Pranov Adilet
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## License
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License.
