@@ -40,8 +40,8 @@
 
 ## Additional Information
 
-- API: Dish data is sourced from TheMealDB API, providing information about recipes.
-- YouTube API: To access the YouTube page, YouTube API is utilized for searching video instructions.
+- API: Dish data is sourced from [TheMealDB API](https://www.themealdb.com/api.php), providing information about recipes.
+- YouTube API: To access the YouTube page, [YouTube API] is utilized for searching video instructions.
 
 ## Author
 
