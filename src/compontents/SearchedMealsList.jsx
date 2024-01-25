@@ -1,14 +1,21 @@
-import React from 'react';
-import {useSelector} from "react-redux";
+import React, {useEffect} from 'react';
+import {useDispatch, useSelector} from "react-redux";
 import {selectSearchedMeal} from "../redux/reduxSelectors/reduxSelectors";
 import {useNavigate} from "react-router-dom";
+import {clearSearchResults} from "../redux/reducers/searchMeal";
 
 const SearchedMealsList = () => {
 
     const {data, status} = useSelector(selectSearchedMeal)
 
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(clearSearchResults())
+    },[])
+
     const navigate = useNavigate()
-    
+
     return (
         <>
             {
@@ -26,7 +33,7 @@ const SearchedMealsList = () => {
                            }
                        </div>
                    </div>
-                    : ''
+                    : status === "loading" ? <div className="meal__search-loading"><h2>Loading...</h2></div> : ""
             }
         </>
     );

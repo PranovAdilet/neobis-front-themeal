@@ -40,7 +40,6 @@ const Meal = () => {
                     </div>
                 </div>
                     <SearchMeal/>
-                    <SearchedMealsList/>
                 </>
     );
 };

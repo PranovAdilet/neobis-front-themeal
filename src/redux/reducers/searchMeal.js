@@ -6,7 +6,6 @@ export const searchMeal = createAsyncThunk(
     async (str) => {
         try {
             const res = await axios(`search.php?s=${str}`)
-
             if (res.status === 200){
                 return res.data
             }else {
@@ -23,6 +22,10 @@ export const searchMeal = createAsyncThunk(
     }
 )
 
+
+
+
+
 const searchedMealSlice = createSlice({
     name: "searchedMealSlice",
     initialState: {
@@ -30,7 +33,13 @@ const searchedMealSlice = createSlice({
         status: "",
         error: ""
     },
-    reducers:{},
+    reducers:{
+        clearSearchResults: (state) => {
+            state.data = []
+            state.status = ''
+            state.error = ''
+        }
+    },
     extraReducers: (builder) => {
         builder
             .addCase(searchMeal.pending, (state) => {
@@ -52,5 +61,6 @@ const searchedMealSlice = createSlice({
     }
 })
 
+export const {clearSearchResults} = searchedMealSlice.actions
 
 export default searchedMealSlice.reducer

@@ -57,7 +57,7 @@
 .meal__item:hover {
   transition: 0.3s;
   transform: translateY(-10px);
-  box-shadow: 10px 12px 29px -14px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 12px 20px -14px rgba(0, 0, 0, 0.75);
 }
 .meal__item-img {
   width: 100%;
@@ -69,6 +69,9 @@
 .meal__empty {
   font-size: 35px;
   padding: 50px 0;
+}
+.meal__search-loading {
+  min-height: 600px;
 }
 
 .search {

@@ -1,10 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import {useParams} from "react-router-dom";
 import {getOneMeal} from "../../redux/reducers/oneMeal";
 import {useDispatch, useSelector} from "react-redux";
 import {selectOneMeal} from "../../redux/reduxSelectors/reduxSelectors";
 import {getIngredients} from "../../utils/ingredients";
-import {logDOM} from "@testing-library/react";
 
 const Description = () => {
 
