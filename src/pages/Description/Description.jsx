@@ -16,7 +16,7 @@ const Description = () => {
 
     useEffect(() => {
         dispatch(getOneMeal(params))
-    }, [params])
+    }, [params, dispatch])
 
 
     if (status === "resolve"){

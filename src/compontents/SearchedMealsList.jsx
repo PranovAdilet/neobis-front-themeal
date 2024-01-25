@@ -12,7 +12,7 @@ const SearchedMealsList = () => {
 
     useEffect(() => {
         dispatch(clearSearchResults())
-    },[])
+    },[dispatch])
 
     const navigate = useNavigate()
 
